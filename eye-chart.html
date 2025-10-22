@@ -6,8 +6,11 @@
     <title>LogMAR Chart</title>
     <style>
       @font-face {
-        font-family: 'Optician Sans';
-        src: url('Optician-Sans.otf') format('opentype');
+        font-family: "Optician Sans";
+        src: url("Optician-Sans.otf") format("opentype");
+      }
+      body {
+        font-family: "Optician Sans";
       }
       li {
         list-style-type: none;
@@ -17,7 +20,7 @@
       }
     </style>
   </head>
-  <body style="font-family: 'Optician Sans'">
+  <body>
     <ol>
       <li class="5-letters-font-size-45"></li>
       <li class="5-letters-font-size-36"></li>
@@ -45,10 +48,11 @@
       }
       return result;
     }
-    const lines = document.querySelectorAll("ol li");
-    lines.forEach((line, index) => {
-      const className = line.className;
-      const [numLetters, fontSize] = className.split("-letters-font-size-");
+    const lines = document.querySelectorAll("li");
+    lines.forEach((line) => {
+      const [numLetters, fontSize] = line.className.split(
+        "-letters-font-size-"
+      );
       line.style.fontSize = fontSize + "px";
       line.textContent = `${randomChars(Number(numLetters))}`;
     });

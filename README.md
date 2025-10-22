@@ -1,3 +1,5 @@
-For personal use. To be used on my 75' TV.
-
-Supposedly, the font `Optician-Sans.otf` doesn't need to be installed on the system.
+- For my personal use at home.
+- Old school eye charts is called the Snellen Chart. Newer ones is called the LogMAR Chart, with a different font and different scoring system and supposedly better than Snellen. This page uses the LogMAR font, but no scoring.
+- In real eye testing, the viewing distance and the absolute size of the chart need to be tightly controlled. But for me, I only use it to monitor the progression of myopia, so as long as I open the page on the same screen and stand at the same distance, I don't care about the scoring.
+- Only 10 letters C, D, H, K, N, O, R, S, V, Z are supposed to be used.
+- Supposedly the font `Optician-Sans.otf` doesn't need to be installed on the system.
