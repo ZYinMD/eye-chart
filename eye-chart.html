@@ -39,12 +39,20 @@
   </body>
   <script>
     function randomChars(num) {
-      // num is an integer, return a string of num random uppercase letters, the letters can only be one of C, D, H, K, N, O, R, S, V, Z
+      // num is an integer, return a string of num random uppercase letters from the set
+      // C, D, H, K, N, O, R, S, V, Z.
       const letters = "CDHKNORZSV";
       let result = "";
       for (let i = 0; i < num; i++) {
-        const randomIndex = Math.floor(Math.random() * letters.length);
-        result += letters[randomIndex];
+        // two adjacent letters shouldn't be the same, so we get a random char, retry until it's different from the previous char
+        while (true) {
+          const idx = Math.floor(Math.random() * letters.length);
+          const nextChar = letters[idx];
+          if (result.at(-1) !== nextChar) {
+            result += nextChar;
+            break;
+          }
+        }
       }
       return result;
     }
